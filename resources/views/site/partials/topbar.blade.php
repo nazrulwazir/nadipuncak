@@ -1,12 +1,12 @@
 <!-- resources/views/site/partials/topbar.blade.php -->
-<div class="top-bar">
+<div class="top-bar d-none d-lg-block">
     <div class="container-fluid">
         <div class="row align-items-center">
             <div class="col-lg-4 col-md-12">
                 <div class="logo">
                 </div>
             </div>
-            <div class="col-lg-8 col-md-7 d-none d-lg-block">
+            <div class="col-lg-8 col-md-7">
                 <div class="row">
                     <div class="col-4">
                         <div class="top-bar-item">
