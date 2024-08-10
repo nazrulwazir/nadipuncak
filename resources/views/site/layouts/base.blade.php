@@ -5,8 +5,24 @@
     <meta charset="utf-8">
     <title>@yield('title', 'Nadi Puncak Sdn Bhd')</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Construction Company Website Template" name="keywords">
-    <meta content="Construction Company Website Template" name="description">
+    
+    <!-- Dynamic Meta Tags for SEO -->
+    <meta name="keywords" content="@yield('meta_keywords', 'Construction, Civil Engineering, Nadi Puncak, Contractor, Kedah, Malaysia')">
+    <meta name="description" content="@yield('meta_description', 'Nadi Puncak Sdn Bhd is a leading Bumiputera-owned contractor and civil engineering company in Alor Setar, Kedah.')">
+    
+    <!-- Open Graph Meta Tags for Social Media Sharing -->
+    <meta property="og:title" content="@yield('og_title', 'Nadi Puncak Sdn Bhd')" />
+    <meta property="og:description" content="@yield('og_description', 'Nadi Puncak Sdn Bhd is a leading Bumiputera-owned contractor and civil engineering company in Alor Setar, Kedah.')" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ url()->current() }}" />
+    <meta property="og:image" content="@yield('og_image', asset('themes/img/logo.jpg'))" />
+    <meta property="og:site_name" content="Nadi Puncak Sdn Bhd" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="@yield('twitter_title', 'Nadi Puncak Sdn Bhd')" />
+    <meta name="twitter:description" content="@yield('twitter_description', 'Nadi Puncak Sdn Bhd is a leading Bumiputera-owned contractor and civil engineering company in Alor Setar, Kedah.')" />
+    <meta name="twitter:image" content="@yield('twitter_image', asset('themes/img/logo.jpg'))" />
 
     <!-- Favicon -->
     <link href="{{ asset('themes/img/favicon.ico') }}" rel="icon">
