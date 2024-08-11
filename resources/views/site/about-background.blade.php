@@ -1,5 +1,7 @@
 @extends('site.layouts.app')
 
+@section('title', 'Our Background')
+
 @section('content')
     @include('site.partials.page-header', ['title' => 'Background'])
     @include('site.components.company-profile', [
@@ -13,6 +15,5 @@
     <div class="mb-5"></div>
     @include('site.partials.scope-of-work')
     <div class="mb-5"></div>
-    @include('site.partials.feature')
-    @include('site.partials.fact')
+    @include('site.partials.feature', ['expanded' => true])
 @endsection

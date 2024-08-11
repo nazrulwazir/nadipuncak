@@ -1,5 +1,7 @@
 @extends('site.layouts.app')
 
+@section('title', 'Our Services')
+
 @section('content')
     @include('site.partials.page-header', ['title' => 'Our Services'])
 
@@ -14,7 +16,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item">
                         <div class="service-img">
-                            <img src="{{ asset('themes/img/service-1.jpg') }}" alt="Civil Telecommunication Works">
+                            <img src="{{ asset('themes/img/actual/service1.webp') }}" alt="Civil Telecommunication Works">
                             <div class="service-overlay">
                                 <p>
                                     We offer civil telecommunication works, including the construction and maintenance of telecommunication infrastructure.
@@ -23,14 +25,13 @@
                         </div>
                         <div class="service-text">
                             <h3>Civil Telecommunication Works</h3>
-                            <a class="btn" href="{{ asset('themes/img/service-1.jpg') }}" data-lightbox="service">+</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="service-item">
                         <div class="service-img">
-                            <img src="{{ asset('themes/img/service-2.jpg') }}" alt="Telecommunication Infra Repair">
+                            <img src="{{ asset('themes/img/actual/service2.webp') }}" alt="Telecommunication Infra Repair">
                             <div class="service-overlay">
                                 <p>
                                     We specialize in the repair and maintenance of telecommunication infrastructure, ensuring seamless connectivity.
@@ -39,30 +40,13 @@
                         </div>
                         <div class="service-text">
                             <h3>Telecommunication Infra Repair</h3>
-                            <a class="btn" href="{{ asset('themes/img/service-2.jpg') }}" data-lightbox="service">+</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item">
-                        <div class="service-img">
-                            <img src="{{ asset('themes/img/service-3.jpg') }}" alt="Backhoe Rental Service">
-                            <div class="service-overlay">
-                                <p>
-                                    We provide backhoe rental services, ensuring that you have the right equipment for your construction needs.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="service-text">
-                            <h3>Backhoe Rental Service</h3>
-                            <a class="btn" href="{{ asset('themes/img/service-3.jpg') }}" data-lightbox="service">+</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
                     <div class="service-item">
                         <div class="service-img">
-                            <img src="{{ asset('themes/img/service-4.jpg') }}" alt="Building and Landscape Maintenance">
+                            <img src="{{ asset('themes/img/actual/service3.webp') }}" alt="Building and Landscape Maintenance">
                             <div class="service-overlay">
                                 <p>
                                     Our services include comprehensive building and landscape maintenance to keep your properties in excellent condition.
@@ -71,14 +55,13 @@
                         </div>
                         <div class="service-text">
                             <h3>Building and Landscape Maintenance</h3>
-                            <a class="btn" href="{{ asset('themes/img/service-4.jpg') }}" data-lightbox="service">+</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item">
                         <div class="service-img">
-                            <img src="{{ asset('themes/img/service-5.jpg') }}" alt="TNB Maintenance">
+                            <img src="{{ asset('themes/img/actual/service4.webp') }}" alt="TNB Maintenance">
                             <div class="service-overlay">
                                 <p>
                                     We offer TNB maintenance services, ensuring the reliability and efficiency of your electrical systems.
@@ -87,30 +70,13 @@
                         </div>
                         <div class="service-text">
                             <h3>TNB Maintenance</h3>
-                            <a class="btn" href="{{ asset('themes/img/service-5.jpg') }}" data-lightbox="service">+</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="service-item">
-                        <div class="service-img">
-                            <img src="{{ asset('themes/img/service-6.jpg') }}" alt="Grass Cutter Service and Painting">
-                            <div class="service-overlay">
-                                <p>
-                                    Our grass cutter service and painting solutions help maintain your property's aesthetic and functional integrity.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="service-text">
-                            <h3>Grass Cutter Service and Painting</h3>
-                            <a class="btn" href="{{ asset('themes/img/service-6.jpg') }}" data-lightbox="service">+</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="service-item">
                         <div class="service-img">
-                            <img src="{{ asset('themes/img/service-7.jpg') }}" alt="Transformer Purification">
+                            <img src="{{ asset('themes/img/actual/service5.webp') }}" alt="Transformer Purification">
                             <div class="service-overlay">
                                 <p>
                                     We provide transformer purification services, ensuring the longevity and efficiency of your electrical transformers.
@@ -119,7 +85,21 @@
                         </div>
                         <div class="service-text">
                             <h3>Transformer Purification</h3>
-                            <a class="btn" href="{{ asset('themes/img/service-7.jpg') }}" data-lightbox="service">+</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item">
+                        <div class="service-img">
+                            <img src="{{ asset('themes/img/actual/service6.webp') }}" alt="Backhoe Rental Service">
+                            <div class="service-overlay">
+                                <p>
+                                    We provide backhoe rental services, ensuring that you have the right equipment for your construction needs.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="service-text">
+                            <h3>Backhoe Rental Service</h3>
                         </div>
                     </div>
                 </div>

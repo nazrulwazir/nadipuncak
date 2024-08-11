@@ -7,20 +7,20 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="{{ asset('themes/img/carousel-1.jpg') }}" alt="Carousel Image">
+            <img src="{{ asset('themes/img/slider/img1.webp') }}" alt="Carousel Image">
             <div class="carousel-caption">
                 <p class="animated fadeInRight">Your Trusted Partner</p>
                 <h1 class="animated fadeInLeft">Committed to Excellence</h1>
-                <a class="btn animated fadeInUp" href="#">Learn More</a>
+                <a class="btn animated fadeInUp" href="{{ url('/services') }}">Learn More</a> <!-- Link updated -->
             </div>
         </div>
 
         <div class="carousel-item">
-            <img src="{{ asset('themes/img/carousel-2.jpg') }}" alt="Carousel Image">
+            <img src="{{ asset('themes/img/slider/img2.webp') }}" alt="Carousel Image">
             <div class="carousel-caption">
                 <p class="animated fadeInRight">100% Bumiputera-owned</p>
                 <h1 class="animated fadeInLeft">Innovative Construction Solutions</h1>
-                <a class="btn animated fadeInUp" href="#">Learn More</a>
+                <a class="btn animated fadeInUp" href="{{ url('/portfolio') }}">Learn More</a> <!-- Link updated -->
             </div>
         </div>
 
@@ -29,7 +29,7 @@
             <div class="carousel-caption">
                 <p class="animated fadeInRight">We Are Trusted</p>
                 <h1 class="animated fadeInLeft">For Your Construction Needs</h1>
-                <a class="btn animated fadeInUp" href="#">Learn More</a>
+                <a class="btn animated fadeInUp" href="{{ url('/about/background') }}">Learn More</a> <!-- Link updated -->
             </div>
         </div>
     </div>

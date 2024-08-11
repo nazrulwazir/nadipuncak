@@ -8,7 +8,7 @@
                             <i class="flaticon-worker"></i>
                         </div>
                         <div class="fact-text">
-                            <h2 data-toggle="counter-up">109</h2>
+                            <h2 data-toggle="counter-up">20</h2>
                             <p>Expert Workers</p>
                         </div>
                     </div>
@@ -17,7 +17,7 @@
                             <i class="flaticon-building"></i>
                         </div>
                         <div class="fact-text">
-                            <h2 data-toggle="counter-up">485</h2>
+                            <h2 data-toggle="counter-up">55</h2>
                             <p>Happy Clients</p>
                         </div>
                     </div>
@@ -30,7 +30,7 @@
                             <i class="flaticon-address"></i>
                         </div>
                         <div class="fact-text">
-                            <h2 data-toggle="counter-up">789</h2>
+                            <h2 data-toggle="counter-up">257</h2>
                             <p>Completed Projects</p>
                         </div>
                     </div>
@@ -39,7 +39,7 @@
                             <i class="flaticon-crane"></i>
                         </div>
                         <div class="fact-text">
-                            <h2 data-toggle="counter-up">890</h2>
+                            <h2 data-toggle="counter-up">6</h2>
                             <p>Running Projects</p>
                         </div>
                     </div>

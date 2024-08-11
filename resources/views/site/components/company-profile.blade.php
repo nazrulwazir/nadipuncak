@@ -1,10 +1,10 @@
 <!-- resources/views/site/components/company-profile.blade.php -->
-<div class="company-profile">
+<div class="company-profile service-section">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-5 col-md-6">
                 <div class="company-img">
-                    <img src="{{ asset('themes/img/about.jpg') }}" alt="Company Image" class="img-fluid">
+                    <img src="{{ asset('themes/img/actual/img1.jpeg') }}" alt="Company Image" class="img-fluid">
                 </div>
             </div>
             <div class="col-lg-7 col-md-6">
@@ -20,7 +20,9 @@
                         <p>{{ $vision ?? 'With a solid vision and mission, Nadi Puncak Sdn Bhd aims to achieve excellence and success in the construction, contractor, and civil engineering industries.' }}</p>
                     @else
                         <p>{{ $shortSummary ?? 'NADI PUNCAK SDN BHD is a leading Bumiputera-owned contractor and civil engineering company in Alor Setar, Kedah.' }}</p>
-                        <a class="btn" href="{{ $learnMoreLink ?? '#' }}">Learn More</a>
+                        <a class="btn" href="{{ $learnMoreLink ?? '#' }}">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
                     @endif
                 </div>
             </div>

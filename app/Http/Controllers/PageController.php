@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class PageController extends Controller
 {
@@ -71,36 +72,35 @@ class PageController extends Controller
 
     public function licenses()
     {
-        $licenses = [
-            ['image' => '1.jpg', 'title' => 'SSM'],
-            ['image' => '2.jpg', 'title' => 'CIDB'],
-            ['image' => '3.jpg', 'title' => 'MOF'],
-            ['image' => '4.jpg', 'title' => 'MOF'],
-        ];
+        // Get all image files from the public/themes/img/certs directory
+        $certImages = File::files(public_path('themes/img/certs'));
 
-        return view('site.licenses', compact('licenses'));
+        // Filter the files to only include images
+        $certImages = array_map(function ($file) {
+            return $file->getFilename();
+        }, $certImages);
+
+        // Pass the image filenames to the view
+        return view('site.licenses', compact('certImages'));
     }
 
     public function gallery()
     {
-        $galleryImages = [
-            ['image' => '1.jpg', 'title' => 'Project 1'],
-            ['image' => '2.jpg', 'title' => 'Project 2'],
-            ['image' => '1.jpg', 'title' => 'Project 1'],
-            ['image' => '2.jpg', 'title' => 'Project 2'],
-            ['image' => '1.jpg', 'title' => 'Project 1'],
-            ['image' => '2.jpg', 'title' => 'Project 2'],
-            ['image' => '1.jpg', 'title' => 'Project 1'],
-            ['image' => '2.jpg', 'title' => 'Project 2'],
-            ['image' => '1.jpg', 'title' => 'Project 1'],
-            ['image' => '2.jpg', 'title' => 'Project 2'],
-            ['image' => '1.jpg', 'title' => 'Project 1'],
-            ['image' => '2.jpg', 'title' => 'Project 2'],
-            ['image' => '1.jpg', 'title' => 'Project 1'],
-            ['image' => '2.jpg', 'title' => 'Project 2'],
-            ['image' => '1.jpg', 'title' => 'Project 1'],
-            ['image' => '2.jpg', 'title' => 'Project 2'],
-        ];
+        // Path to the gallery directory
+        $galleryPath = public_path('themes/img/actual/gallery');
+
+        // Get all image files from the directory
+        $files = File::files($galleryPath);
+
+        // Create an array to hold image data
+        $galleryImages = [];
+
+        foreach ($files as $file) {
+            $galleryImages[] = [
+                'image' => $file->getFilename(),
+                'title' => pathinfo($file->getFilename(), PATHINFO_FILENAME), // Use the filename without extension as the title
+            ];
+        }
 
         return view('site.gallery', compact('galleryImages'));
     }

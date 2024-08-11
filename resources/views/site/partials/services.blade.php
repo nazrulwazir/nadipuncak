@@ -4,7 +4,7 @@
         <div class="row align-items-center">
             <div class="col-md-6">
                 <div class="service-image">
-                    <img src="{{ asset('themes/img/service-1.jpg') }}" alt="Service Image" class="img-fluid">
+                    <img src="{{ asset('themes/img/actual/img2.jpeg') }}" alt="Service Image" class="img-fluid rounded">
                 </div>
             </div>
             <div class="col-md-6">
@@ -13,16 +13,33 @@
                     <h2 class="service-title">{{ $serviceTitle ?? 'Area of Expertise' }}</h2>
                 </div>
                 <div class="service-content">
-                    <ul class="service-list">
-                        <li>Civil Telecommunication Works</li>
-                        <li>Telecommunication Infra Repair</li>
-                        <li>Backhoe Rental Service</li>
-                        <li>Building and Landscape Maintenance</li>
-                        <li>TNB Maintenance</li>
-                        <li>Grass Cutter Service and Painting</li>
-                        <li>Transformer Purification</li>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-network-wired mr-3" style="color: #030f27;"></i>
+                            Civil Telecommunication Works
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-tools mr-3" style="color: #030f27;"></i>
+                            Telecommunication Infra Repair
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-seedling mr-3" style="color: #030f27;"></i>
+                            Building and Landscape Maintenance
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-bolt mr-3" style="color: #030f27;"></i>
+                            TNB Maintenance
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-plug mr-3" style="color: #030f27;"></i>
+                            Transformer Purification
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-truck mr-3" style="color: #030f27;"></i>
+                            Backhoe Rental Service
+                        </li>
                     </ul>
-                    <a href="{{ route('site.services') }}" class="btn btn-read-more">Read More <i class="fa fa-arrow-down"></i></a>
+                    <a href="{{ route('site.services') }}" class="btn btn-read-more mt-3">Read More <i class="fas fa-arrow-right ml-2"></i></a>
                 </div>
             </div>
         </div>

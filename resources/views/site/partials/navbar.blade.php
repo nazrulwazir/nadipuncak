@@ -3,9 +3,8 @@
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
             <!-- Logo -->
-            <a href="{{ url('/') }}" class="navbar-brand d-flex align-items-center">
-                <img src="{{ asset('themes/img/logo.jpg') }}" alt="Logo" class="logo" style="height: 60px;">
-                <span class="ml-2"></span>
+            <a href="{{ url('/') }}" class="navbar-brand d-flex align-items-center" style="padding: 0; display: flex; align-items: center;">
+                <img src="{{ asset('themes/img/actual/logo.png') }}" alt="Logo" class="logo" style="height: 80px; width: auto; max-height: 80px;">
             </a>
             
             <!-- Toggler for Mobile View -->

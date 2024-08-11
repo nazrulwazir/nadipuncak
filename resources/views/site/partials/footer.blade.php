@@ -53,7 +53,6 @@
                 <p>&copy; <a href="{{ url('/') }}">Nadi Puncak Sdn Bhd</a>, All Right Reserved.</p>
             </div>
             <div class="col-md-6">
-                <p>Designed By <a href="#">Nazrul Wazir</a></p>
             </div>
         </div>
     </div>
