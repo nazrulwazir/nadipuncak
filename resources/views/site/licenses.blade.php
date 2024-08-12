@@ -13,12 +13,16 @@
         </div>
 
         <!-- Tab Navigation -->
-        <ul id="portfolio-flters" class="d-flex justify-content-center">
-            <li data-filter="*" class="filter-active">All</li>
-            @foreach($folders as $folder)
-                <li data-filter=".{{ Str::slug($folder) }}">{{ ucfirst($folder) }}</li>
-            @endforeach
-        </ul>
+        <div class="row">
+            <div class="col-12">
+                <ul id="portfolio-flters" class="d-flex justify-content-center flex-wrap">
+                    <li data-filter="*" class="filter-active">All</li>
+                    @foreach($folders as $folder)
+                        <li data-filter=".{{ Str::slug($folder) }}">{{ ucfirst($folder) }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
 
         <!-- Tab Content -->
         <div class="row portfolio-container">
@@ -33,6 +37,7 @@
                                 </div>
                             </div>
                             <div class="portfolio-text">
+                                <h3>{{ pathinfo($image, PATHINFO_FILENAME) }}</h3>
                                 <a class="btn" href="{{ asset('themes/img/licenses_certs/' . $folder . '/' . $image) }}" data-lightbox="{{ $folder }}">+</a>
                             </div>
                         </div>
@@ -53,10 +58,11 @@
         list-style: none;
         display: flex;
         justify-content: center;
+        flex-wrap: wrap; /* Ensures tabs wrap on small screens */
     }
     #portfolio-flters li {
         cursor: pointer;
-        margin: 0 10px;
+        margin: 5px 10px;
         padding: 8px 15px;
         font-size: 14px;
         font-weight: 600;
