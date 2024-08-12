@@ -4,6 +4,7 @@
         <div class="row align-items-center">
             <div class="col-lg-4 col-md-12">
                 <div class="logo">
+                    <!-- Add logo or branding here if needed -->
                 </div>
             </div>
             <div class="col-lg-8 col-md-7">
@@ -15,7 +16,7 @@
                             </div>
                             <div class="top-bar-text">
                                 <h3>Opening Hour</h3>
-                                <p>Mon - Fri, 8:00 AM - 6:00 PM</p>
+                                <p>Sunday - Thursday, 9:00 AM - 6:00 PM</p>
                             </div>
                         </div>
                     </div>
@@ -27,6 +28,7 @@
                             <div class="top-bar-text">
                                 <h3>Call Us</h3>
                                 <p>04 - 787 7661</p>
+                                <p>014 - 802 9611</p>
                             </div>
                         </div>
                     </div>

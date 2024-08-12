@@ -6,15 +6,17 @@
         <li data-target="#carousel" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner">
+        <!-- First Carousel Item -->
         <div class="carousel-item active">
             <img src="{{ asset('themes/img/slider/img1.webp') }}" alt="Carousel Image">
             <div class="carousel-caption">
                 <p class="animated fadeInRight">Your Trusted Partner</p>
-                <h1 class="animated fadeInLeft">Committed to Excellence</h1>
+                <h1 class="animated fadeInLeft">Nadi Puncak Sdn Bhd <br> Committed to Excellence</h1>
                 <a class="btn animated fadeInUp" href="{{ url('/services') }}">Learn More</a> <!-- Link updated -->
             </div>
         </div>
 
+        <!-- Second Carousel Item -->
         <div class="carousel-item">
             <img src="{{ asset('themes/img/slider/img2.webp') }}" alt="Carousel Image">
             <div class="carousel-caption">
@@ -24,6 +26,7 @@
             </div>
         </div>
 
+        <!-- Third Carousel Item -->
         <div class="carousel-item">
             <img src="{{ asset('themes/img/carousel-3.jpg') }}" alt="Carousel Image">
             <div class="carousel-caption">

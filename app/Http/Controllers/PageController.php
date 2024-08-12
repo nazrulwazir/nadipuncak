@@ -71,18 +71,25 @@ class PageController extends Controller
     }
 
     public function licenses()
-    {
-        // Get all image files from the public/themes/img/certs directory
-        $certImages = File::files(public_path('themes/img/certs'));
+{
+    // Get all image files from the licenses and certs directories
+    $licensesImages = File::files(public_path('themes/img/licenses'));
+    $certificatesImages = File::files(public_path('themes/img/certs'));
 
-        // Filter the files to only include images
-        $certImages = array_map(function ($file) {
-            return $file->getFilename();
-        }, $certImages);
+    // Filter the files to only include images
+    $licensesImages = array_map(function ($file) {
+        return $file->getFilename();
+    }, $licensesImages);
 
-        // Pass the image filenames to the view
-        return view('site.licenses', compact('certImages'));
-    }
+    $certificatesImages = array_map(function ($file) {
+        return $file->getFilename();
+    }, $certificatesImages);
+
+    // Pass the image filenames to the view
+    return view('site.licenses', compact('licensesImages', 'certificatesImages'));
+}
+
+
 
     public function gallery()
     {

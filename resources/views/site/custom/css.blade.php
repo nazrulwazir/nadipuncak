@@ -266,5 +266,10 @@ padding-top: 18px;
 .testimonial {
     margin: 0px 0;
 }
+/* In your CSS file (e.g., style.css) */
+.large-logo {
+    height: 200px; /* Adjust the size as needed */
+    width: auto;
+}
 
 </style>
