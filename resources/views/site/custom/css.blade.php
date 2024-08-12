@@ -216,18 +216,6 @@ padding-top: 18px;
     max-width: none !important;
 }
 
-.portfolio-text h3 {
-    white-space: normal !important;
-    overflow: visible !important;
-    text-overflow: unset !important;
-    width: auto !important;
-    max-width: none !important;
-}
-
-.portfolio .portfolio-text {
-    height: 90px;
-}
-
 .dropdown-item.active, .dropdown-item:active {
     background-color: #050f27;
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Str;
 
 class PageController extends Controller
 {
@@ -70,34 +71,39 @@ class PageController extends Controller
         return view('site.portfolio', compact('projects'));
     }
 
-    public function licenses()
+    public function licenses($folder = null)
     {
         // Get all directories within the licenses_certs folder
         $folders = File::directories(public_path('themes/img/licenses_certs'));
 
         // Prepare an array to hold images grouped by their folder
         $imagesByFolder = [];
+        $folderSlugsMap = []; // Map to hold slugified folder names to original names
 
-        foreach ($folders as $folder) {
-            // Get the folder name (e.g., 'Licenses', 'Certificates')
-            $folderName = basename($folder);
-
-            // Get all image files within each folder
-            $images = File::files($folder);
-
-            // Filter the files to only include images
+        foreach ($folders as $directory) {
+            $folderName = basename($directory);
+            $slug = Str::slug($folderName); // Slugify the folder name
+            $images = File::files($directory);
             $images = array_map(function ($file) {
                 return $file->getFilename();
             }, $images);
 
-            // Store images under the folder name
-            $imagesByFolder[$folderName] = $images;
+            $imagesByFolder[$slug] = $images;
+            $folderSlugsMap[$slug] = $folderName; // Store the mapping of slug to original name
         }
 
-        // Pass folder names and images to the view
+        if (is_null($folder)) {
+            // Default to the first folder if no specific folder is provided
+            $folder = array_key_first($imagesByFolder);
+        }
+
+        // Get the original folder name using the slug
+        $originalFolderName = $folderSlugsMap[$folder] ?? null;
+
         return view('site.licenses', [
-            'folders' => array_keys($imagesByFolder),
-            'imagesByFolder' => $imagesByFolder,
+            'folders' => $folderSlugsMap, // Pass the map of slugs to original folder names
+            'currentFolder' => $originalFolderName, // Use the original folder name
+            'images' => $imagesByFolder[$folder] ?? [], // Fetch images for the current folder
         ]);
     }
 

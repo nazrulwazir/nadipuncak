@@ -12,7 +12,6 @@
             <div class="carousel-caption">
                 <p class="animated fadeInRight">Your Trusted Partner</p>
                 <h1 class="animated fadeInLeft">Nadi Puncak Sdn Bhd <br> Committed to Excellence</h1>
-                <a class="btn animated fadeInUp" href="{{ url('/services') }}">Learn More</a> <!-- Link updated -->
             </div>
         </div>
 
@@ -22,7 +21,6 @@
             <div class="carousel-caption">
                 <p class="animated fadeInRight">100% Bumiputera-owned</p>
                 <h1 class="animated fadeInLeft">Innovative Construction Solutions</h1>
-                <a class="btn animated fadeInUp" href="{{ url('/portfolio') }}">Learn More</a> <!-- Link updated -->
             </div>
         </div>
 
@@ -32,7 +30,6 @@
             <div class="carousel-caption">
                 <p class="animated fadeInRight">We Are Trusted</p>
                 <h1 class="animated fadeInLeft">For Your Construction Needs</h1>
-                <a class="btn animated fadeInUp" href="{{ url('/about/background') }}">Learn More</a> <!-- Link updated -->
             </div>
         </div>
     </div>
@@ -46,3 +43,20 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
+
+@push('styles')
+<style type="text/css">
+.carousel-caption h1,
+.carousel-caption p,
+.carousel-caption .btn {
+    color: #fdbe33 !important;
+}
+.carousel-caption .btn {
+    border-color: #fdbe33;
+    background-color: #fdbe33;
+}
+.carousel-caption .btn:hover {
+    background-color: #cfa829; /* Darker shade for hover effect */
+}
+</style>
+@endpush

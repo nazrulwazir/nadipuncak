@@ -3,46 +3,30 @@
 @section('title', 'Licenses & Certificates')
 
 @section('content')
-    @include('site.partials.page-header', ['title' => 'Licenses & Certificates'])
+    @include('site.partials.page-header', ['title' => ucfirst($currentFolder)])
 
     <!-- Licenses & Certificates Start -->
     <div class="container">
         <div class="section-header text-center">
             <p>Our Achievements</p>
-            <h2>Licenses & Certificates</h2>
+            <h2>{{ ucfirst($currentFolder) }}</h2>
         </div>
-
-        <!-- Tab Navigation -->
-        <div class="row">
-            <div class="col-12">
-                <ul id="portfolio-flters" class="d-flex justify-content-center flex-wrap">
-                    <li data-filter="*" class="filter-active">All</li>
-                    @foreach($folders as $folder)
-                        <li data-filter=".{{ Str::slug($folder) }}">{{ ucfirst($folder) }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        </div>
-
+        
         <!-- Tab Content -->
         <div class="row portfolio-container">
-            @foreach($imagesByFolder as $folder => $images)
-                @foreach($images as $image)
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item {{ Str::slug($folder) }} wow fadeInUp">
-                        <div class="portfolio-warp">
-                            <div class="portfolio-img">
-                                <img src="{{ asset('themes/img/licenses_certs/' . $folder . '/' . $image) }}" alt="{{ pathinfo($image, PATHINFO_FILENAME) }}" class="img-fluid lazyload">
-                                <div class="portfolio-overlay">
-                                    <p>{{ pathinfo($image, PATHINFO_FILENAME) }}</p>
-                                </div>
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>{{ pathinfo($image, PATHINFO_FILENAME) }}</h3>
-                                <a class="btn" href="{{ asset('themes/img/licenses_certs/' . $folder . '/' . $image) }}" data-lightbox="{{ $folder }}">+</a>
-                            </div>
+            @foreach($images as $image)
+                <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item wow fadeInUp">
+                    <div class="portfolio-warp">
+                        <div class="portfolio-img">
+                            <img src="{{ asset('themes/img/licenses_certs/' . $currentFolder . '/' . $image) }}" alt="{{ pathinfo($image, PATHINFO_FILENAME) }}" class="img-fluid lazyload">
+                        </div>
+                        <div class="portfolio-text">
+                            <a class="btn" href="{{ asset('themes/img/licenses_certs/' . $currentFolder . '/' . $image) }}" data-lightbox="portfolio">
+                                <i class="fas fa-search"></i>
+                            </a>
                         </div>
                     </div>
-                @endforeach
+                </div>
             @endforeach
         </div>
     </div>
@@ -50,97 +34,75 @@
 @endsection
 
 @push('styles')
-<style>
-    /* Portfolio Filters */
-    #portfolio-flters {
-        padding: 0;
-        margin-bottom: 30px;
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap; /* Ensures tabs wrap on small screens */
-    }
-    #portfolio-flters li {
-        cursor: pointer;
-        margin: 5px 10px;
-        padding: 8px 15px;
-        font-size: 14px;
-        font-weight: 600;
-        text-transform: uppercase;
-        color: #444;
-        border-radius: 5px;
-        transition: all 0.3s ease-in-out;
-        background-color: #f1f1f1;
-    }
-    #portfolio-flters li.filter-active {
-        background-color: #fdbe33;
-        color: #fff;
-    }
+<style type="text/css">
+    /* Ensure the portfolio container has enough space at the bottom */
+.portfolio-container {
+    margin-bottom: 100px; /* Increase bottom margin to avoid footer overlap */
+}
 
-    /* Portfolio Item */
+/* Footer should be pushed below the content */
+footer {
+    margin-top: 50px;
+    padding-top: 30px; /* Add padding to give space for content */
+    clear: both; /* Ensure footer clears floated content */
+}
+
+/* Add a clearfix after the last row in the portfolio container */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Ensure WOW.js animations do not cause content to be hidden */
+.wow {
+    visibility: visible !important;
+    animation-name: fadeInUp !important;
+    animation-duration: 1s !important;
+    animation-fill-mode: both !important; /* Ensure content stays visible after animation */
+}
+
+/* Adjust button styling for better visibility */
+.portfolio-text .btn {
+    background-color: #fdbe33;
+    color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.portfolio-text .btn:hover {
+    background-color: #ffcc33;
+    transform: scale(1.1);
+}
+
+/* Ensure footer doesn't overlap content */
+body {
+    padding-bottom: 150px; /* Ensure enough padding at the bottom */
+}
+
+/* Media query adjustments for smaller screens */
+@media (max-width: 768px) {
     .portfolio-item {
-        margin-bottom: 30px;
-    }
-
-    .portfolio-warp {
-        position: relative;
-    }
-
-    .portfolio-img {
-        position: relative;
-        overflow: hidden;
-    }
-
-    .portfolio-img img {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-    }
-
-    .portfolio-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.7);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        transition: all 0.3s ease;
-    }
-
-    .portfolio-overlay p {
-        color: #fff;
-        text-align: center;
-        padding: 0 15px;
-    }
-
-    .portfolio-warp:hover .portfolio-overlay {
-        opacity: 1;
-    }
-
-    .portfolio-text {
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    .portfolio-text h3 {
-        font-size: 18px;
-        color: #030f27;
+        margin-bottom: 20px;
     }
 
     .portfolio-text .btn {
-        background-color: #fdbe33;
-        color: #fff;
-        border-radius: 50%;
-        width: 30px;
-        height: 30px;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
+        width: 35px;
+        height: 35px;
     }
+
+    footer {
+        margin-top: 30px;
+        padding-top: 20px;
+    }
+}
+
 </style>
 @endpush
 
@@ -154,20 +116,20 @@
         elements_selector: "img"
     });
 
-    // Initialize Isotope for filtering
-    var portfolioIsotope = $('.portfolio-container').isotope({
-        itemSelector: '.portfolio-item',
-        layoutMode: 'fitRows'
-    });
+    // Initialize WOW.js for animations with adjusted settings
+new WOW({
+    boxClass: 'wow',      // default
+    animateClass: 'animated', // default
+    offset: 100,          // Trigger animations earlier to avoid content overlap
+    mobile: true,         // Allow animations on mobile devices
+    live: true            // Act on asynchronously loaded content
+}).init();
 
-    $('#portfolio-flters li').on('click', function () {
-        $("#portfolio-flters li").removeClass('filter-active');
-        $(this).addClass('filter-active');
+// Initialize lazyload
+var lazyLoadInstance = new LazyLoad({
+    elements_selector: "img"
+});
 
-        portfolioIsotope.isotope({ filter: $(this).data('filter') });
-    });
 
-    // Initialize WOW.js for animations
-    new WOW().init();
 </script>
 @endpush

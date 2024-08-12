@@ -4,7 +4,7 @@
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
             <!-- Logo -->
             <a href="{{ url('/') }}" class="navbar-brand d-flex align-items-center" style="padding: 0; display: flex; align-items: center;">
-                <img src="{{ asset('themes/img/actual/logo.png') }}" alt="Logo" class="logo" style="height: 80px; width: auto; max-height: 80px;">
+                <img src="{{ asset('themes/img/actual/logo.png') }}" alt="Logo" class="logo" style="height: 100px; width: auto; max-height: 100px;">
             </a>
             
             <!-- Toggler for Mobile View -->
@@ -28,7 +28,17 @@
 
                     <a href="{{ url('/services') }}" class="nav-item nav-link {{ Request::is('services') ? 'active' : '' }}">Services</a>
                     <a href="{{ url('/portfolio') }}" class="nav-item nav-link {{ Request::is('portfolio') ? 'active' : '' }}">Project</a>
-                    <a href="{{ url('/licenses-certificates') }}" class="nav-item nav-link {{ Request::is('licenses-certificates') ? 'active' : '' }}">Licenses / Certificates</a>
+                    
+                    <!-- Licenses / Certificates Dropdown -->
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle {{ Request::is('licenses-certificates/*') ? 'active' : '' }}" data-toggle="dropdown">Licenses / Certificates</a>
+                        <div class="dropdown-menu">
+                            @foreach($licenseFolders as $folder)
+                                <a href="{{ url('/licenses-certificates/' . Str::slug($folder)) }}" class="dropdown-item {{ Request::is('licenses-certificates/' . Str::slug($folder)) ? 'active' : '' }}">{{ ucfirst($folder) }}</a>
+                            @endforeach
+                        </div>
+                    </div>
+
                     <a href="{{ url('/gallery') }}" class="nav-item nav-link {{ Request::is('gallery') ? 'active' : '' }}">Gallery</a>
                     <a href="{{ url('/contact') }}" class="nav-item nav-link {{ Request::is('contact') ? 'active' : '' }}">Contact</a>
                 </div>

@@ -29,7 +29,7 @@ Route::group([
     Route::get('about/organisation', 'PageController@aboutOrganisation')->name('about.organisation');
     Route::get('services', 'PageController@services')->name('services');
     Route::get('portfolio', 'PageController@portfolio')->name('portfolio');
-    Route::get('licenses-certificates', 'PageController@licenses')->name('licenses-certificates');
     Route::get('gallery', 'PageController@gallery')->name('gallery');
     Route::get('contact', 'PageController@contact')->name('contact');
+    Route::get('licenses-certificates/{folder?}', 'PageController@licenses')->name('licenses-certificates');
 });
