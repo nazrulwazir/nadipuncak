@@ -1,4 +1,4 @@
-<div class="fact">
+<div class="fact service-section">
     <div class="container-fluid">
         <div class="row counters">
             <div class="col-md-6 fact-left wow slideInLeft">
