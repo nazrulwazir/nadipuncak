@@ -12,8 +12,6 @@
         'shortSummary' => '',
         'learnMoreLink' => route('site.about.background') // Link to the about page
     ])
-    <div class="mb-5"></div> <!-- Adds margin bottom of 5 units after carousel -->
-    
     @include('site.partials.scope-of-work')
     @include('site.partials.fact')
     @include('site.partials.services')
