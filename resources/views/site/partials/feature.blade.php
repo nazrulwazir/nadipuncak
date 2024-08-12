@@ -125,5 +125,8 @@
         margin-right: 0.5rem; /* Space between icon and text */
         color: #030f27; /* Icon color */
     }
+    .feature {
+        margin-bottom: 0px;
+    }
 </style>
 @endpush
