@@ -71,25 +71,35 @@ class PageController extends Controller
     }
 
     public function licenses()
-{
-    // Get all image files from the licenses and certs directories
-    $licensesImages = File::files(public_path('themes/img/licenses'));
-    $certificatesImages = File::files(public_path('themes/img/certs'));
+    {
+        // Get all directories within the licenses_certs folder
+        $folders = File::directories(public_path('themes/img/licenses_certs'));
 
-    // Filter the files to only include images
-    $licensesImages = array_map(function ($file) {
-        return $file->getFilename();
-    }, $licensesImages);
+        // Prepare an array to hold images grouped by their folder
+        $imagesByFolder = [];
 
-    $certificatesImages = array_map(function ($file) {
-        return $file->getFilename();
-    }, $certificatesImages);
+        foreach ($folders as $folder) {
+            // Get the folder name (e.g., 'Licenses', 'Certificates')
+            $folderName = basename($folder);
 
-    // Pass the image filenames to the view
-    return view('site.licenses', compact('licensesImages', 'certificatesImages'));
-}
+            // Get all image files within each folder
+            $images = File::files($folder);
 
+            // Filter the files to only include images
+            $images = array_map(function ($file) {
+                return $file->getFilename();
+            }, $images);
 
+            // Store images under the folder name
+            $imagesByFolder[$folderName] = $images;
+        }
+
+        // Pass folder names and images to the view
+        return view('site.licenses', [
+            'folders' => array_keys($imagesByFolder),
+            'imagesByFolder' => $imagesByFolder,
+        ]);
+    }
 
     public function gallery()
     {

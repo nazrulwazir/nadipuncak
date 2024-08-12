@@ -15,44 +15,29 @@
         <!-- Tab Navigation -->
         <ul id="portfolio-flters" class="d-flex justify-content-center">
             <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".licenses">Licenses</li>
-            <li data-filter=".certificates">Certificates</li>
+            @foreach($folders as $folder)
+                <li data-filter=".{{ Str::slug($folder) }}">{{ ucfirst($folder) }}</li>
+            @endforeach
         </ul>
 
         <!-- Tab Content -->
         <div class="row portfolio-container">
-            <!-- Licenses Images -->
-            @foreach($licensesImages as $image)
-                <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item licenses wow fadeInUp">
-                    <div class="portfolio-warp">
-                        <div class="portfolio-img">
-                            <img src="{{ asset('themes/img/licenses/' . $image) }}" alt="{{ pathinfo($image, PATHINFO_FILENAME) }}" class="img-fluid lazyload">
-                            <div class="portfolio-overlay">
-                                <p>{{ pathinfo($image, PATHINFO_FILENAME) }}</p>
+            @foreach($imagesByFolder as $folder => $images)
+                @foreach($images as $image)
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item {{ Str::slug($folder) }} wow fadeInUp">
+                        <div class="portfolio-warp">
+                            <div class="portfolio-img">
+                                <img src="{{ asset('themes/img/licenses_certs/' . $folder . '/' . $image) }}" alt="{{ pathinfo($image, PATHINFO_FILENAME) }}" class="img-fluid lazyload">
+                                <div class="portfolio-overlay">
+                                    <p>{{ pathinfo($image, PATHINFO_FILENAME) }}</p>
+                                </div>
+                            </div>
+                            <div class="portfolio-text">
+                                <a class="btn" href="{{ asset('themes/img/licenses_certs/' . $folder . '/' . $image) }}" data-lightbox="{{ $folder }}">+</a>
                             </div>
                         </div>
-                        <div class="portfolio-text">
-                            <a class="btn" href="{{ asset('themes/img/licenses/' . $image) }}" data-lightbox="licenses">+</a>
-                        </div>
                     </div>
-                </div>
-            @endforeach
-
-            <!-- Certificates Images -->
-            @foreach($certificatesImages as $image)
-                <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item certificates wow fadeInUp">
-                    <div class="portfolio-warp">
-                        <div class="portfolio-img">
-                            <img src="{{ asset('themes/img/certs/' . $image) }}" alt="{{ pathinfo($image, PATHINFO_FILENAME) }}" class="img-fluid lazyload">
-                            <div class="portfolio-overlay">
-                                <p>{{ pathinfo($image, PATHINFO_FILENAME) }}</p>
-                            </div>
-                        </div>
-                        <div class="portfolio-text">
-                            <a class="btn" href="{{ asset('themes/img/certs/' . $image) }}" data-lightbox="certificates">+</a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             @endforeach
         </div>
     </div>
