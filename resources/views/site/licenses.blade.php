@@ -13,7 +13,7 @@
         </div>
         
         <!-- Tab Content -->
-        <div class="row portfolio-container">
+        <div class="row portfolio-container justify-content-center">
             @foreach($images as $image)
                 <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item wow fadeInUp">
                     <div class="portfolio-warp">
@@ -35,57 +35,55 @@
 
 @push('styles')
 <style type="text/css">
-    /* Ensure the portfolio container has enough space at the bottom */
-.portfolio-container {
-    margin-bottom: 100px; /* Increase bottom margin to avoid footer overlap */
-}
+    /* Center the portfolio items within the container */
+    .portfolio-container {
+        margin-bottom: 100px; /* Ensure there's enough space below the content */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-/* Add a clearfix after the last row in the portfolio container */
-.clearfix::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-/* Ensure WOW.js animations do not cause content to be hidden */
-.wow {
-    visibility: visible !important;
-    animation-name: fadeInUp !important;
-    animation-duration: 1s !important;
-    animation-fill-mode: both !important; /* Ensure content stays visible after animation */
-}
-
-/* Adjust button styling for better visibility */
-.portfolio-text .btn {
-    background-color: #fdbe33;
-    color: #fff;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.portfolio-text .btn:hover {
-    background-color: #ffcc33;
-    transform: scale(1.1);
-}
-
-/* Media query adjustments for smaller screens */
-@media (max-width: 768px) {
+    /* Portfolio Item */
     .portfolio-item {
-        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
     }
 
+    .portfolio-warp {
+        text-align: center; /* Align text in the center */
+    }
+
+    /* Adjust button styling for better visibility */
     .portfolio-text .btn {
-        width: 35px;
-        height: 35px;
+        background-color: #fdbe33;
+        color: #fff;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, transform 0.3s ease;
     }
-}
 
+    .portfolio-text .btn:hover {
+        background-color: #ffcc33;
+        transform: scale(1.1);
+    }
+
+    /* Media query adjustments for smaller screens */
+    @media (max-width: 768px) {
+        .portfolio-item {
+            margin-bottom: 20px;
+        }
+
+        .portfolio-text .btn {
+            width: 35px;
+            height: 35px;
+        }
+    }
 </style>
 @endpush
 
@@ -100,19 +98,12 @@
     });
 
     // Initialize WOW.js for animations with adjusted settings
-new WOW({
-    boxClass: 'wow',      // default
-    animateClass: 'animated', // default
-    offset: 100,          // Trigger animations earlier to avoid content overlap
-    mobile: true,         // Allow animations on mobile devices
-    live: true            // Act on asynchronously loaded content
-}).init();
-
-// Initialize lazyload
-var lazyLoadInstance = new LazyLoad({
-    elements_selector: "img"
-});
-
-
+    new WOW({
+        boxClass: 'wow',      // default
+        animateClass: 'animated', // default
+        offset: 100,          // Trigger animations earlier to avoid content overlap
+        mobile: true,         // Allow animations on mobile devices
+        live: true            // Act on asynchronously loaded content
+    }).init();
 </script>
 @endpush
