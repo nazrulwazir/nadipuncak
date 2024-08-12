@@ -40,13 +40,6 @@
     margin-bottom: 100px; /* Increase bottom margin to avoid footer overlap */
 }
 
-/* Footer should be pushed below the content */
-footer {
-    margin-top: 50px;
-    padding-top: 30px; /* Add padding to give space for content */
-    clear: both; /* Ensure footer clears floated content */
-}
-
 /* Add a clearfix after the last row in the portfolio container */
 .clearfix::after {
     content: "";
@@ -81,11 +74,6 @@ footer {
     transform: scale(1.1);
 }
 
-/* Ensure footer doesn't overlap content */
-body {
-    padding-bottom: 150px; /* Ensure enough padding at the bottom */
-}
-
 /* Media query adjustments for smaller screens */
 @media (max-width: 768px) {
     .portfolio-item {
@@ -95,11 +83,6 @@ body {
     .portfolio-text .btn {
         width: 35px;
         height: 35px;
-    }
-
-    footer {
-        margin-top: 30px;
-        padding-top: 20px;
     }
 }
 
