@@ -255,10 +255,22 @@ padding-top: 18px;
 .testimonial {
     margin: 0px 0;
 }
-/* In your CSS file (e.g., style.css) */
 .large-logo {
-    height: 200px; /* Adjust the size as needed */
+    height: 200px;
     width: auto;
 }
-
+@media (max-width: 767px) {
+    .navbar-nav .btn {
+        margin: 5px 0;
+    }
+}
+.navbar-nav.ml-auto {
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 991.98px) {
+    .nav-bar .btn {
+        display: inline-block;
+    }
+}
 </style>
