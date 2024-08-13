@@ -15,8 +15,8 @@
                                 <i class="flaticon-calendar"></i>
                             </div>
                             <div class="top-bar-text">
-                                <h3>Opening Hour</h3>
-                                <p>Sunday - Thursday, 9:00 AM - 6:00 PM</p>
+                                <h3>{{ __('topbar.opening_hour') }}</h3>
+                                <p>{{ __('topbar.opening_time') }}</p>
                             </div>
                         </div>
                     </div>
@@ -26,9 +26,9 @@
                                 <i class="flaticon-call"></i>
                             </div>
                             <div class="top-bar-text">
-                                <h3>Call Us</h3>
-                                <p>04 - 787 7661</p>
-                                <p>014 - 802 9611</p>
+                                <h3>{{ __('topbar.call_us') }}</h3>
+                                <p>{{ __('topbar.phone_number_1') }}</p>
+                                <p>{{ __('topbar.phone_number_2') }}</p>
                             </div>
                         </div>
                     </div>
@@ -38,8 +38,8 @@
                                 <i class="flaticon-send-mail"></i>
                             </div>
                             <div class="top-bar-text">
-                                <h3>Email Us</h3>
-                                <p>nadipuncak23@gmail.com</p>
+                                <h3>{{ __('topbar.email_us') }}</h3>
+                                <p>{{ __('topbar.email_address') }}</p>
                             </div>
                         </div>
                     </div>

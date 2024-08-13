@@ -1,6 +1,6 @@
 @extends('site.layouts.app')
 
-@section('title', 'Licenses & Certificates')
+@section('title', __('licenses.title'))
 
 @section('content')
     @include('site.partials.page-header', ['title' => ucfirst($currentFolder)])
@@ -8,7 +8,7 @@
     <!-- Licenses & Certificates Start -->
     <div class="container">
         <div class="section-header text-center">
-            <p>Our Achievements</p>
+            <p>{{ __('licenses.achievements') }}</p>
             <h2>{{ ucfirst($currentFolder) }}</h2>
         </div>
         

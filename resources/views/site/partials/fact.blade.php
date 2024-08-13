@@ -1,3 +1,4 @@
+<!-- resources/views/site/partials/fact.blade.php -->
 <div class="fact service-section">
     <div class="container-fluid">
         <div class="row counters">
@@ -9,7 +10,7 @@
                         </div>
                         <div class="fact-text">
                             <h2 data-toggle="counter-up">20</h2>
-                            <p>Expert Workers</p>
+                            <p>{{ __('fact.expert_workers') }}</p>
                         </div>
                     </div>
                     <div class="col-6">
@@ -18,7 +19,7 @@
                         </div>
                         <div class="fact-text">
                             <h2 data-toggle="counter-up">55</h2>
-                            <p>Happy Clients</p>
+                            <p>{{ __('fact.happy_clients') }}</p>
                         </div>
                     </div>
                 </div>
@@ -31,7 +32,7 @@
                         </div>
                         <div class="fact-text">
                             <h2 data-toggle="counter-up">257</h2>
-                            <p>Completed Projects</p>
+                            <p>{{ __('fact.completed_projects') }}</p>
                         </div>
                     </div>
                     <div class="col-6">
@@ -40,7 +41,7 @@
                         </div>
                         <div class="fact-text">
                             <h2 data-toggle="counter-up">6</h2>
-                            <p>Running Projects</p>
+                            <p>{{ __('fact.running_projects') }}</p>
                         </div>
                     </div>
                 </div>

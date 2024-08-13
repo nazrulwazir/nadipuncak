@@ -9,8 +9,8 @@
                         <i class="flaticon-worker"></i>
                     </div>
                     <div class="feature-text">
-                        <h3>Our Mission</h3>
-                        <p>We are committed to enhancing the company’s performance by delivering top-notch services and demonstrating high dedication within the team.</p>
+                        <h3>{{ __('feature.mission_title') }}</h3>
+                        <p>{{ __('feature.mission_text') }}</p>
                     </div>
                 </div>
             </div>
@@ -21,8 +21,8 @@
                         <i class="flaticon-building"></i>
                     </div>
                     <div class="feature-text">
-                        <h3>Our Vision</h3>
-                        <p>To achieve excellence and success in the construction, contracting, and civil engineering industries through a strong mission and vision.</p>
+                        <h3>{{ __('feature.vision_title') }}</h3>
+                        <p>{{ __('feature.vision_text') }}</p>
                     </div>
                 </div>
             </div>
@@ -33,8 +33,8 @@
                         <i class="flaticon-call"></i>
                     </div>
                     <div class="feature-text">
-                        <h3>Quality Services</h3>
-                        <p>We always prioritize quality in every project we undertake.</p>
+                        <h3>{{ __('feature.quality_services_title') }}</h3>
+                        <p>{{ __('feature.quality_services_text') }}</p>
                     </div>
                 </div>
             </div>
@@ -58,13 +58,13 @@
                     <div class="long-desc-icon" style="color: #030f27;">
                         <i class="fas fa-bullseye"></i>
                     </div>
-                    <h4>Mission Expanded</h4>
-                    <p>At Nadi Puncak Sdn Bhd, our mission extends beyond mere project completion. We strive to leave a lasting impact on the communities we serve.</p>
-                    <h5>Key Highlights:</h5>
+                    <h4>{{ __('feature.mission_expanded_title') }}</h4>
+                    <p>{{ __('feature.mission_expanded_text') }}</p>
+                    <h5>{{ __('feature.mission_highlight_1') }}:</h5>
                     <ul class="custom-list">
-                        <li><strong><i class="fas fa-check-circle"></i> Community Impact:</strong> Boosted connectivity in rural areas through our telecommunications projects.</li>
-                        <li><strong><i class="fas fa-check-circle"></i> Innovation:</strong> Implementing cutting-edge techniques in infrastructure projects.</li>
-                        <li><strong><i class="fas fa-check-circle"></i> Sustainability:</strong> Focus on environmentally friendly practices in all projects.</li>
+                        <li><strong><i class="fas fa-check-circle"></i> {{ __('feature.mission_highlight_1') }}:</strong> {{ __('feature.mission_highlight_1_text') }}</li>
+                        <li><strong><i class="fas fa-check-circle"></i> {{ __('feature.mission_highlight_2') }}:</strong> {{ __('feature.mission_highlight_2_text') }}</li>
+                        <li><strong><i class="fas fa-check-circle"></i> {{ __('feature.mission_highlight_3') }}:</strong> {{ __('feature.mission_highlight_3_text') }}</li>
                     </ul>
                 </div>
             </div>
@@ -74,13 +74,13 @@
                     <div class="long-desc-icon" style="color: #030f27;">
                         <i class="fas fa-eye"></i>
                     </div>
-                    <h4>Vision Expanded</h4>
-                    <p>Our vision is to be a leader in sustainable infrastructure. This vision shapes every decision we make, ensuring our projects are both innovative and environmentally responsible.</p>
-                    <h5>Our Vision in Action:</h5>
+                    <h4>{{ __('feature.vision_expanded_title') }}</h4>
+                    <p>{{ __('feature.vision_expanded_text') }}</p>
+                    <h5>{{ __('feature.vision_highlight_1') }}:</h5>
                     <ul class="custom-list">
-                        <li><strong><i class="fas fa-check-circle"></i> Sustainable Practices:</strong> Emphasis on eco-friendly construction methods.</li>
-                        <li><strong><i class="fas fa-check-circle"></i> Efficiency:</strong> Projects designed to minimize environmental impact while maximizing operational efficiency.</li>
-                        <li><strong><i class="fas fa-check-circle"></i> Leadership:</strong> Setting industry standards for responsible engineering.</li>
+                        <li><strong><i class="fas fa-check-circle"></i> {{ __('feature.vision_highlight_1') }}:</strong> {{ __('feature.vision_highlight_1_text') }}</li>
+                        <li><strong><i class="fas fa-check-circle"></i> {{ __('feature.vision_highlight_2') }}:</strong> {{ __('feature.vision_highlight_2_text') }}</li>
+                        <li><strong><i class="fas fa-check-circle"></i> {{ __('feature.vision_highlight_3') }}:</strong> {{ __('feature.vision_highlight_3_text') }}</li>
                     </ul>
                 </div>
             </div>
@@ -90,13 +90,13 @@
                     <div class="long-desc-icon" style="color: #030f27;">
                         <i class="fas fa-award"></i>
                     </div>
-                    <h4>Quality Services Expanded</h4>
-                    <p>Quality is at the core of everything we do at Nadi Puncak Sdn Bhd. Our attention to detail ensures that every project stands the test of time.</p>
-                    <h5>What Sets Us Apart:</h5>
+                    <h4>{{ __('feature.quality_expanded_title') }}</h4>
+                    <p>{{ __('feature.quality_expanded_text') }}</p>
+                    <h5>{{ __('feature.quality_highlight_1') }}:</h5>
                     <ul class="custom-list">
-                        <li><strong><i class="fas fa-check-circle"></i> High Standards:</strong> Rigorous quality checks at every stage of a project.</li>
-                        <li><strong><i class="fas fa-check-circle"></i> Expert Team:</strong> Skilled professionals dedicated to excellence.</li>
-                        <li><strong><i class="fas fa-check-circle"></i> Durable Results:</strong> Long-lasting, high-quality outcomes that satisfy our clients.</li>
+                        <li><strong><i class="fas fa-check-circle"></i> {{ __('feature.quality_highlight_1') }}:</strong> {{ __('feature.quality_highlight_1_text') }}</li>
+                        <li><strong><i class="fas fa-check-circle"></i> {{ __('feature.quality_highlight_2') }}:</strong> {{ __('feature.quality_highlight_2_text') }}</li>
+                        <li><strong><i class="fas fa-check-circle"></i> {{ __('feature.quality_highlight_3') }}:</strong> {{ __('feature.quality_highlight_3_text') }}</li>
                     </ul>
                 </div>
             </div>

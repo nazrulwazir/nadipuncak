@@ -10,8 +10,8 @@
         <div class="carousel-item active">
             <img src="{{ asset('themes/img/slider/img1.webp') }}" alt="Carousel Image">
             <div class="carousel-caption">
-                <p class="animated fadeInRight">Your Trusted Partner</p>
-                <h1 class="animated fadeInLeft">Nadi Puncak Sdn Bhd <br> Committed to Excellence</h1>
+                <p class="animated fadeInRight">{{ __('carousel.trusted_partner') }}</p>
+                <h1 class="animated fadeInLeft">{!! __('carousel.committed_excellence') !!}</h1>
             </div>
         </div>
 
@@ -19,8 +19,8 @@
         <div class="carousel-item">
             <img src="{{ asset('themes/img/slider/img2.webp') }}" alt="Carousel Image">
             <div class="carousel-caption">
-                <p class="animated fadeInRight">100% Bumiputera-owned</p>
-                <h1 class="animated fadeInLeft">Innovative Construction Solutions</h1>
+                <p class="animated fadeInRight">{{ __('carousel.bumiputera_owned') }}</p>
+                <h1 class="animated fadeInLeft">{{ __('carousel.innovative_solutions') }}</h1>
             </div>
         </div>
 
@@ -28,8 +28,8 @@
         <div class="carousel-item">
             <img src="{{ asset('themes/img/carousel-3.jpg') }}" alt="Carousel Image">
             <div class="carousel-caption">
-                <p class="animated fadeInRight">We Are Trusted</p>
-                <h1 class="animated fadeInLeft">For Your Construction Needs</h1>
+                <p class="animated fadeInRight">{{ __('carousel.trusted_partner') }}</p>
+                <h1 class="animated fadeInLeft">{!! __('carousel.trusted_for_needs') !!}</h1>
             </div>
         </div>
     </div>

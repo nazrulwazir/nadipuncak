@@ -1,8 +1,7 @@
 <?php
 
 return [
-    'menu' => 'MENU',
-    'home' => 'Laman Utama',
+    'home' => 'Utama',
     'about' => 'Tentang Kami',
     'background' => 'Latar Belakang',
     'organisation' => 'Organisasi',
@@ -10,7 +9,5 @@ return [
     'project' => 'Projek',
     'licenses_certificates' => 'Lesen / Sijil',
     'gallery' => 'Galeri',
-    'contact' => 'Hubungi Kami',
-    'english' => 'Inggeris',
-    'malay' => 'Melayu',
+    'contact' => 'Hubungi',
 ];

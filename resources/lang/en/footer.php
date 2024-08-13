@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'contact_information' => 'Contact Information',
+    'service_areas' => 'Service Areas',
+    'useful_pages' => 'Useful Pages',
+    'board_of_directors' => 'Board of Directors',
+    'managing_director' => 'Encik Muhammad Hakimie Bin Haslee (Managing Director)',
+    'director' => 'Encik Muhammad Huzairie Bin Haslee (Director)',
+    'building_construction' => 'Building Construction',
+    'house_renovation' => 'House Renovation',
+    'architecture_design' => 'Architecture Design',
+    'interior_design' => 'Interior Design',
+    'painting' => 'Painting',
+    'about_us' => 'About Us',
+    'contact_us' => 'Contact Us',
+    'projects' => 'Projects',
+    'licenses_certificates' => 'Licenses / Certificates',
+    'gallery' => 'Gallery',
+    'opening_hours' => 'Opening Hours',
+    'company_name' => 'Nadi Puncak Sdn Bhd',
+    'address' => 'No. 283, Tingkat 1, Jalan Shahab Perdana, 05150 Alor Setar, Kedah Darul Aman.',
+    'phone' => 'Phone',
+    'email' => 'Email',
+    'opening_hours_full' => 'Sunday - Thursday, 9 AM - 6 PM',
+    'all_rights_reserved' => 'All Right Reserved.',
+];

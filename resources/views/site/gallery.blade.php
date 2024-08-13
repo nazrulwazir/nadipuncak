@@ -1,15 +1,15 @@
 @extends('site.layouts.app')
 
-@section('title', 'Gallery')
+@section('title', __('gallery.title'))
 
 @section('content')
-    @include('site.partials.page-header', ['title' => 'Project Gallery'])
+    @include('site.partials.page-header', ['title' => __('gallery.header')])
 
     <!-- Gallery Start -->
     <div class="container gallery-container">
         <div class="section-header text-center">
-            <p>Our Projects</p>
-            <h2>Gallery</h2>
+            <p>{{ __('gallery.subtitle') }}</p>
+            <h2>{{ __('gallery.section_title') }}</h2>
         </div>
         <div class="row gallery-row">
             @foreach($galleryImages as $image)

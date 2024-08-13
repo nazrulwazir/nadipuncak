@@ -1,16 +1,16 @@
 @extends('site.layouts.app')
 
-@section('title', 'Our Projects')
+@section('title', __('portfolio.title'))
 
 @section('content')
-    @include('site.partials.page-header', ['title' => 'Our Projects'])
+    @include('site.partials.page-header', ['title' => __('portfolio.header')])
 
     <!-- Projects List Start -->
     <div class="projects-list">
         <div class="container">
             <div class="section-header text-center">
-                <p>Our Projects</p>
-                <h2>Explore Our Projects</h2>
+                <p>{{ __('portfolio.header') }}</p>
+                <h2>{{ __('portfolio.section_title') }}</h2>
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-8">
@@ -27,7 +27,7 @@
             @if(count($projects) > 9)
                 <div class="row">
                     <div class="col-12 load-more text-center">
-                        <a class="btn btn-primary" id="loadMore">Load More</a>
+                        <a class="btn btn-primary" id="loadMore">{{ __('portfolio.load_more') }}</a>
                     </div>
                 </div>
             @endif

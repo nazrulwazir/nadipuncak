@@ -165,6 +165,7 @@ justify-content: center;
 height: 100%;
 padding: 10px;
 margin-bottom: 20px;
+min-height: 270px;
 }
 
 .footer {
