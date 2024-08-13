@@ -40,10 +40,11 @@
                 </div>
 
                 <!-- QR Code Display -->
+                <!-- QR Code Display -->
                 <div class="col-md-6 text-center">
-                    <h3>{{ __('Scan to Save Contact') }}</h3>
+                    <h3>{{ __('contact.scan_to_save') }}</h3>
                     {!! QrCode::size(200)->generate('Nadi Puncak Sdn Bhd, No. 283, Tingkat 1, Jalan Shahab Perdana, 05150 Alor Setar, Kedah Darul Aman, Malaysia. Phone: 04 - 787 7661. Email: nadipuncak23@gmail.com') !!}
-                    <p>{{ __('Scan the QR code to save our contact information to your device.') }}</p>
+                    <p>{{ __('contact.scan_description') }}</p>
                 </div>
             </div>
         </div>

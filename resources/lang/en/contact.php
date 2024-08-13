@@ -16,4 +16,6 @@ return [
     'message' => 'Message',
     'success_message' => 'Your message has been sent successfully!',
     'error_message' => 'There was an error sending your message. Please try again later.',
+    'scan_to_save' => 'Scan to Save Contact',
+    'scan_description' => 'Scan the QR code to save our contact information to your device.',
 ];

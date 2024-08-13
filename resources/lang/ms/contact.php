@@ -16,4 +16,6 @@ return [
     'message' => 'Mesej',
     'success_message' => 'Mesej anda telah berjaya dihantar!',
     'error_message' => 'Terdapat ralat semasa menghantar mesej anda. Sila cuba lagi kemudian.',
+    'scan_to_save' => 'Imbas untuk Simpan Kontak',
+    'scan_description' => 'Imbas kod QR untuk menyimpan maklumat kontak kami ke peranti anda.',
 ];
