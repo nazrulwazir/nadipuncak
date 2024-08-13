@@ -24,4 +24,5 @@ return [
     'email' => 'E-mel',
     'opening_hours_full' => 'Ahad - Khamis, 9 AM - 6 PM',
     'all_rights_reserved' => 'Hak Cipta Terpelihara.',
+    'visitor_count' => 'Jumlah Pelawat',
 ];

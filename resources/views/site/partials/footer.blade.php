@@ -55,8 +55,11 @@
             <div class="col-md-6">
                 <p>&copy; <a href="{{ url('/') }}">{{ __('footer.company_name') }}</a>, {{ __('footer.all_rights_reserved') }}</p>
             </div>
-            <div class="col-md-6">
-                <!-- You can add any additional info here if necessary -->
+            <div class="col-md-6 text-right">
+                <p>
+                    <i class="fas fa-users"></i> 
+                    {{ __('footer.visitor_count') }}: {{ $visitorCount }}
+                </p>
             </div>
         </div>
     </div>

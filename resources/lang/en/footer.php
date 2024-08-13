@@ -24,4 +24,5 @@ return [
     'email' => 'Email',
     'opening_hours_full' => 'Sunday - Thursday, 9 AM - 6 PM',
     'all_rights_reserved' => 'All Right Reserved.',
+    'visitor_count' => 'Total Visitors',
 ];
