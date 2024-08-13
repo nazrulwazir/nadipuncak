@@ -46,26 +46,21 @@
 
 @push('styles')
 <style type="text/css">
-/* Ensuring the text is sharp and clear */
 .carousel-caption h1,
 .carousel-caption p,
 .carousel-caption .btn {
     color: #fdbe33 !important;
-    text-transform: uppercase; /* Makes the text all uppercase for a more consistent appearance */
-    letter-spacing: 1px; /* Increases spacing between letters slightly */
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
-
-/* Button Styles */
 .carousel-caption .btn {
     border-color: #fdbe33;
     background-color: #fdbe33;
-    font-weight: 700; /* Ensures button text is bold as well */
+    font-weight: 700;
 }
-
 .carousel-caption .btn:hover {
-    background-color: #cfa829; /* Darker shade for hover effect */
+    background-color: #cfa829;
     border-color: #cfa829;
 }
-
 </style>
 @endpush
