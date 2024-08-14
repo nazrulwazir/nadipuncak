@@ -11,7 +11,7 @@ class TrackVisitor
 {
     public function handle($request, Closure $next)
     {
-        $ip = $request->ip();
+        $ip = $request->header('X-Forwarded-For') ?? $request->ip();
         $visitor = Visitor::where('ip_address', $ip)->whereDate('created_at', now())->first();
         
         if (!$visitor) {
