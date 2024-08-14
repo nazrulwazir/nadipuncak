@@ -24,11 +24,12 @@
             <div class="col-md-6 col-lg-3">
                 <div class="footer-link">
                     <h2>{{ __('footer.service_areas') }}</h2>
-                    <a href="{{ url('/services#building-construction') }}">{{ __('footer.building_construction') }}</a>
-                    <a href="{{ url('/services#house-renovation') }}">{{ __('footer.house_renovation') }}</a>
-                    <a href="{{ url('/services#architecture-design') }}">{{ __('footer.architecture_design') }}</a>
-                    <a href="{{ url('/services#interior-design') }}">{{ __('footer.interior_design') }}</a>
-                    <a href="{{ url('/services#painting') }}">{{ __('footer.painting') }}</a>
+                    <a href="{{ url('/services#telecom-works') }}">{{ __('our_services.services.telecom_works') }}</a>
+                    <a href="{{ url('/services#telecom-repair') }}">{{ __('our_services.services.telecom_repair') }}</a>
+                    <a href="{{ url('/services#building-maintenance') }}">{{ __('our_services.services.building_maintenance') }}</a>
+                    <a href="{{ url('/services#tnb-maintenance') }}">{{ __('our_services.services.tnb_maintenance') }}</a>
+                    <a href="{{ url('/services#transformer-purification') }}">{{ __('our_services.services.transformer_purification') }}</a>
+                    <a href="{{ url('/services#backhoe-rental') }}">{{ __('our_services.services.backhoe_rental') }}</a>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
